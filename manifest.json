@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Should I Follow",
+  "version": "1.0",
+  "description": "Make informed follow decisions on X (Twitter) by automatically scanning profiles for your keywords.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://nitter.tiekoetter.com/*",
+    "https://nitter.privacyredirect.com/*",
+    "https://nitter.kuuro.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*"],
+      "js": [
+        "virastar.min.js",
+        "content.js"
+      ],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
