@@ -51,9 +51,9 @@ function createOrShowPanel(initialContent = '') {
   if (!panel) {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = `
-      <button id="analyzer-reopen-btn" class="analyzer-reopen-btn" title="Open Tweet Analyzer">&#x1F50D;</button>
+      <button id="analyzer-reopen-btn" class="analyzer-reopen-btn" title="Open Should I Follow">&#x1F50D;</button>
       <div id="blacklist-analyzer-panel">
-        <div class="panel-header"><h3>Tweet Analyzer</h3><button id="panel-close-btn">&times;</button></div>
+        <div class="panel-header"><h3>Should I Follow</h3><button id="panel-close-btn">&times;</button></div>
         <div class="panel-search-wrapper"><input type="text" id="panel-search-input" placeholder="Enter new term to search..."><button id="panel-search-btn">Search</button></div>
         <div id="panel-results" class="panel-results">${initialContent}</div>
       </div>
